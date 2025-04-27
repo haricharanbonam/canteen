@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans text-neutral-800 dark:text-neutral-200 bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300 ease-in-out;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg sm:text-xl;
+  }
+
+  h6 {
+    @apply text-base sm:text-lg;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg border border-white/30 dark:border-neutral-800/30 shadow-glass dark:shadow-glass-dark transition-all duration-300;
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-glass-hover dark:hover:shadow-glass-dark-hover hover:-translate-y-1;
+  }
+
+  .neomorphic {
+    @apply rounded-2xl bg-neutral-100 dark:bg-neutral-900 shadow-neuro dark:shadow-neuro-dark transition-all duration-300;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white shadow-md hover:shadow-lg;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700;
+  }
+
+  .btn-accent {
+    @apply bg-accent-500 hover:bg-accent-600 text-white shadow-md hover:shadow-lg;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
